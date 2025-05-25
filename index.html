@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Service Worker Test</title>
+</head>
+<body>
+  <h1>Service Worker Demo</h1>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+      .then(reg => console.log('Service Worker registered:', reg.scope))
+      .catch(err => console.error('Service Worker registration failed:', err));
+    }
+  </script>
+</body>
+</html>
